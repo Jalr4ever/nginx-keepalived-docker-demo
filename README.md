@@ -29,15 +29,15 @@ CONTAINER ID        IMAGE                                    COMMAND            
 Try to pause the master server: 
 
 ```bash
-$ docker pause nginxkeepaliveddockerdemo_nginx_master_1
+$ docker pause n_k_master
 ```
 
 Now, visit `localhost:8000` and you should see `Secondary`. 
 
 Recover the master server and pause the slave server: 
 ```bash
-$ docker unpause nginxkeepaliveddockerdemo_nginx_master_1
-$ docker pause nginxkeepaliveddockerdemo_nginx_slave_1
+$ docker unpause n_k_master
+$ docker pause n_k_slave
 ```
 
 Visit `localhost:8000` and you should see `Primary` again. 

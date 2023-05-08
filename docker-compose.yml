@@ -1,6 +1,7 @@
 version: "3"
 services:
   nginx_master:
+    container_name: k_n_master
     build:
       context: ./
       dockerfile: ./Dockerfile
@@ -14,6 +15,7 @@ services:
     cap_add: 
       - NET_ADMIN
   nginx_slave:
+    container_name: k_n_slave
     build:
       context: ./
       dockerfile: ./Dockerfile
